@@ -31,7 +31,7 @@ interface TaskFormState {
   setTasks: (title: string) => void;
   setdescription: (description: string) => void;
   setdueDate: (dueDate: string | null) => void;
-  setAssignees : (user: string[]) => void;
+  setAssignees : (assignees: string[]) => void;
   resetForm: () => void;
 }
 export type { TaskFormState }

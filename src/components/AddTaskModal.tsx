@@ -116,7 +116,6 @@ export default function AddTaskModal({
           maxDropdownHeight={300}
           hidePickedOptions
           searchable
-          clearable
           value={assignees}
           onChange={(assignees) => setAssignees(assignees)}
           error={assignees?.length === 0 ? "Assignees is required" : false}

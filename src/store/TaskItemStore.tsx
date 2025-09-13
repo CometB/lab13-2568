@@ -8,7 +8,6 @@ export const useTaskStore = create<TaskItemProps>((set) => ({
   addTask: (title, description, dueDate, assignees) =>
     set((state) => ({
       tasks: [
-        ...state.tasks,
         {
           id: uuidv4(),
           title,
@@ -18,6 +17,7 @@ export const useTaskStore = create<TaskItemProps>((set) => ({
           isDone: false,
           doneAt: null,
         },
+        ...state.tasks,
       ],
     })),
   toggleTask: (id) =>
